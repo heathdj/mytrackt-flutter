@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:mytrackt/screens/login_page.dart';
+import 'package:mytrackt/widgets/login_form.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({Key? key}) : super(key: key);
@@ -42,7 +44,13 @@ class GetStartedPage extends StatelessWidget {
                     primary: Colors.white,
                     backgroundColor: Colors.blueAccent,
                     textStyle: TextStyle(fontSize: 18)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginPage(),
+                      ));
+                },
                 icon: Icon(Icons.login_rounded),
                 label: Padding(
                   padding: const EdgeInsets.all(12.0),
